@@ -1,7 +1,11 @@
 import { colors } from "./colors";
 import { Container } from "./shared";
+import { BigText, SmallText, RegularText } from "./Texts";
 
 export {
     colors,
-    Container
+    Container, 
+    BigText,
+    SmallText,
+    RegularText
 }

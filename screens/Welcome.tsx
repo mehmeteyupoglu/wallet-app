@@ -3,11 +3,9 @@ import { StatusBar } from "react-native";
 import styled from "styled-components/native";
 
 // custom components
-import { colors, Container } from "../components";
+import { colors, Container, BigText, SmallText } from "../components";
 // image 
 import background from "../assets/bgs/background_v1.png";
-
-import { BigText, SmallText } from "../components/Texts";
 
 const WelcomeContainer = styled(Container)`
     background-color: ${colors.secondary};
