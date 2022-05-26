@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Welcome from './screens/Welcome';
 
-const App = () => {
+const App: FunctionComponent = () => {
   return (
     <Welcome />
   );
