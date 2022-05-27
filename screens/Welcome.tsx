@@ -6,6 +6,7 @@ import styled from "styled-components/native";
 import { colors, Container, BigText, SmallText } from "../components";
 // image 
 import background from "../assets/bgs/background_v1.png";
+import { RegularButton } from "../components/Buttons";
 
 const WelcomeContainer = styled(Container)`
     background-color: ${colors.secondary};
@@ -30,6 +31,7 @@ const BottomSection = styled.View`
     flex: 1;
     width: 100%;
     padding: 25px;
+    justify-content: flex-end;
 `
 
 const Welcome: FunctionComponent = () => {
@@ -47,6 +49,9 @@ const Welcome: FunctionComponent = () => {
                     <SmallText textStyles={{width: "70%", marginBottom: 25}}>
                         Best payment method, connects your money to your friends, family.
                     </SmallText>
+                    <RegularButton onPress={() => {console.log('onPressed')}}>
+                        Get Started
+                    </RegularButton>
                 </BottomSection>
             </WelcomeContainer>
         </>
