@@ -6,7 +6,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 // components
 import { Welcome, Home } from "../screens"
-import { colors } from "../components";
+import { colors, Greeting, Profile  } from "../components";
+
+import Avi from "../assets/avi/avatar.png"
 
 export type RootStackParamList = {
     Welcome: undefined;
@@ -28,8 +30,18 @@ const RootStack: FunctionComponent = () => {
                         elevation: 0,
                     }, 
                     headerTintColor: colors.secondary,
+                    headerRightContainerStyle: {
+                        paddingRight: 25,
+                    }, 
+                    headerLeftContainerStyle: {
+                        paddingRight: 15,
+                    }, 
+                    headerRight: () => (
+                        <Profile img={Avi} imgContainerStyle={{backgroundColor: colors.tertiary}} onPress={() => {}}/>
+                    )
                 }}
                 initialRouteName="Home"
+                
             >
                 <Stack.Screen 
                     name="Welcome" 
@@ -38,7 +50,19 @@ const RootStack: FunctionComponent = () => {
                         headerShown: false
                     }}
                 />
-                <Stack.Screen name="Home" component={Home} />
+                <Stack.Screen 
+                    name="Home" 
+                    component={Home}
+                    options={{
+                        headerTitle: (props) => (
+                            <Greeting 
+                                mainText="Hey Mehmet!"
+                                subText="Welcome back"
+                                {...props}
+                            />
+                        )
+                    }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )

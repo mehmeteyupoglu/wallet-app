@@ -14,7 +14,7 @@ const HomeContainer = styled(Container)`
 const Home: FunctionComponent = () => {
     return (
         <HomeContainer>
-            <StatusBar barStyle="light-content" />
+            <StatusBar translucent backgroundColor={'transparent'} barStyle={'dark-content'} />
         </HomeContainer>
     )
 }
