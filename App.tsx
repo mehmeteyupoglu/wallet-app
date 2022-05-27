@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react';
-import Welcome from './screens/Welcome';
+import RootStack from './navigators/RootStack';
 
 const App: FunctionComponent = () => {
   return (
-    <Welcome />
+    <RootStack />
   );
 };
 export default App;
